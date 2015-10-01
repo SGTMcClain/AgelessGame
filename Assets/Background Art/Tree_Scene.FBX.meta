@@ -327,6 +327,70 @@ ModelImporter:
     4300122: Box139
     4300124: Box140
     4300126: Box141
+    6400000: Box040
+    6400002: Box049
+    6400004: Box080
+    6400006: Box081
+    6400008: Box082
+    6400010: Box083
+    6400012: Box084
+    6400014: Box085
+    6400016: Box086
+    6400018: Box087
+    6400020: Box088
+    6400022: Box089
+    6400024: Box090
+    6400026: Box091
+    6400028: Box092
+    6400030: Box093
+    6400032: Box094
+    6400034: Box095
+    6400036: Box096
+    6400038: Box097
+    6400040: Box098
+    6400042: Box099
+    6400044: Box100
+    6400046: Box101
+    6400048: Box102
+    6400050: Box103
+    6400052: Box104
+    6400054: Box105
+    6400056: Box106
+    6400058: Box107
+    6400060: Box108
+    6400062: Box109
+    6400064: Box110
+    6400066: Box111
+    6400068: Box112
+    6400070: Box113
+    6400072: Box114
+    6400074: Box115
+    6400076: Box116
+    6400078: Box117
+    6400080: Box118
+    6400082: Box119
+    6400084: Box120
+    6400086: Box121
+    6400088: Box122
+    6400090: Box123
+    6400092: Box124
+    6400094: Box125
+    6400096: Box126
+    6400098: Box127
+    6400100: Box128
+    6400102: Box129
+    6400104: Box130
+    6400106: Box131
+    6400108: Box132
+    6400110: Box133
+    6400112: Box134
+    6400114: Box135
+    6400116: Box136
+    6400118: Box137
+    6400120: Box138
+    6400122: Box139
+    6400124: Box140
+    6400126: Box141
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -353,7 +417,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
