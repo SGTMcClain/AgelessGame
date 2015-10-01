@@ -31,7 +31,7 @@ public class CountdownTimer : MonoBehaviour {
         seconds = (int)((-Time.timeSinceLevelLoad % 60f) + 60f);
 
         //make the clock stop at 00:00
-        if (minutes == 0 && seconds >= 1)
+        if (minutes == 0 && seconds <= 1)
         {
             seconds = 0;
             PauseGame();
