@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-	using UnityEngine;
-	using System.Collections;
+	
 	public class CameraFollow : MonoBehaviour {
 		public float interpVelocity;
 		public float minDistance;

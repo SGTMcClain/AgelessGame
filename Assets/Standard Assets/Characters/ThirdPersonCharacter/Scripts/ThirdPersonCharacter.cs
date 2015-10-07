@@ -143,20 +143,20 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				m_Animator.speed = m_AnimSpeedMultiplier;
 			}
 		
-			// David - Imput button to in run faster
-			if (Input.GetKey (KeyCode.E)) 
+			// David - Imput button to in run faster - Moved this to its own Script RunButton. Left here for reference.
+			//if (Input.GetKey (KeyCode.E)) 
 			
-			{
+			//{
 				// David - sets animation speed to 2. Tweak speed of speed boost here
-			m_Animator.speed = 2;
+			//m_Animator.speed = 2;
 			
-			} 
+			//} 
 
-			else 
-			{
+			//else 
+			//{
 				// don't use that while airborne
-			m_Animator.speed = 1;
-			}
+			//m_Animator.speed = 1;
+			//}
 		}
 
 
