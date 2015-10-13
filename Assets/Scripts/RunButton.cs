@@ -3,7 +3,7 @@ using System.Collections;
 using UnityStandardAssets.CrossPlatformInput;
 
 namespace UnityStandardAssets.Characters.ThirdPerson 
-{0
+{
 	[RequireComponent(typeof (ThirdPersonCharacter))]
 	[RequireComponent(typeof(Animator))]
 	public class RunButton: MonoBehaviour {
