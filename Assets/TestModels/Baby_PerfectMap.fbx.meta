@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: eb902c6f0538cf1419674df8f5e8c68b
-timeCreated: 1444309804
+guid: 51b55c425ecbcc84b952e3de74cde981
+timeCreated: 1444699292
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -360,7 +360,7 @@ ModelImporter:
         length: 0
         modified: 0
     skeleton:
-    - name: baby_base4(Clone)
+    - name: baby_base6(Clone)
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
@@ -402,13 +402,13 @@ ModelImporter:
       transformModified: 1
     - name: metarig|neck
       position: {x: 5.78728019e-15, y: .307890087, z: 0}
-      rotation: {x: .144180596, y: -7.41062678e-08, z: -3.65173847e-08, w: .989551425}
-      scale: {x: 1, y: 1, z: 1}
+      rotation: {x: .128541216, y: -8.1005858e-08, z: -3.34297177e-08, w: .991704166}
+      scale: {x: 1, y: .999999881, z: 1}
       transformModified: 1
     - name: metarig|head
-      position: {x: 7.11457193e-15, y: .12359947, z: -3.7252903e-09}
-      rotation: {x: -.0449485891, y: 1.8062817e-08, z: 1.39377931e-08, w: .998989344}
-      scale: {x: 1, y: .999999821, z: .999999821}
+      position: {x: -5.75903927e-15, y: .190328106, z: -3.7252903e-09}
+      rotation: {x: -.0291725807, y: 2.48652494e-08, z: 9.24414234e-09, w: .999574423}
+      scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: metarig|shoulder.L
       position: {x: -.0182999801, y: .205621958, z: .111753657}
