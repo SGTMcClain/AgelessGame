@@ -22,7 +22,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		void Update () {
 
 			if (Input.GetKey (KeyCode.E)) {
-				// David - sets animation speed to 2. Tweak speed of speed boost here
+				// David - sets animation speed set in inspecter. tweak speed of speed boost in inspector
 				runSpeed.speed = m_RunSpeed;
 			}
 			else 

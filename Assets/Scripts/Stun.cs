@@ -31,7 +31,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 	
 		void OnCollisionStay(Collision other)
 		{       
-			//If the one colliding have the tag prey it
+			//If the one colliding have the tag Cube it
 			//will get destroyed
 			
 			if(other.gameObject.tag =="Cube")
