@@ -143,7 +143,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				m_Animator.speed = m_AnimSpeedMultiplier;
 			}
 		
-			// David - Imput button to in run faster - Moved this to its own Script RunButton. Left here for reference.
+			// David - Input button to in run faster - Moved this to its own Script RunButton. Left here for reference.
 			//if (Input.GetKey (KeyCode.E)) 
 			
 			//{
