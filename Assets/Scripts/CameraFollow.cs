@@ -40,7 +40,7 @@ public class CameraFollow : MonoBehaviour
     }
 
 
-   // David - switches the camera to lock out with the characters with the buttons that match from Character Switch
+   // David - switches the camera to lock on to the specific character with the buttons that match from Character Switch
     void Update()
     {
 

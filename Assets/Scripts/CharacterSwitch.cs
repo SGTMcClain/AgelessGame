@@ -24,7 +24,7 @@ public class CharacterSwitch : MonoBehaviour
     public GameObject old;
    // public GameObject startCharacter; // David - allows to designate a starting character for the level. Not used except for reference in inspector. May be useful for later. For example for random character look
 
-    // David - check in inspector which characters are disabled at start of the level
+    // David - check in inspector which characters are disabled at start of the level. * Important for the code to work properly * 
     public bool disableTeen; 
     public bool disableBaby;
     public bool disableOld;
@@ -92,14 +92,14 @@ public class CharacterSwitch : MonoBehaviour
    
 
 
-    // David- Allows the teen to be enabled and disables the other characters. Code below works the same for EnableBaby() and EnableOld(0
+    // David- Allows the teen to be enabled and disables the other characters. Code below works the same for EnableBaby() and EnableOld()
 
     void EnableTeen()
     {
         
 
         
-
+        //makes sure the code will not execute unless the correct characters are either enabled or disabled.
         if (disableBaby == false && disableOld == true && disableTeen == true)
         {
 
@@ -109,7 +109,7 @@ public class CharacterSwitch : MonoBehaviour
             baby.SetActive(false);
             old.SetActive(false);
 
-            // David - set the position and rotation to if the baby or adult was previously active
+            // David - set the position and rotation to the baby or adult that was previously active
             teen.transform.position = baby.transform.position;
             teen.transform.rotation = baby.transform.rotation;
         }
@@ -126,7 +126,9 @@ public class CharacterSwitch : MonoBehaviour
         }
 
 
-        // David - need this so the if statement in Update will not work if you press the button again for the current character
+        // David - need this in order to completely deactivate the characters not used and deactivate the button for the current character. 
+        //Not having this code will allow to switch active character with active character by pressing the button twice or more times in a row 
+        // That will cause either a warping effect to the last known location of the character you swapped from. Noticable if you move from the location where you made the character switch.
         disableBaby = true;
         disableOld = true;
         disableTeen = false;
