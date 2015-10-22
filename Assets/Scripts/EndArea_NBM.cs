@@ -4,9 +4,14 @@ using System.Collections;
 public class EndArea_NBM : MonoBehaviour {
 
     public GameObject Player;
+    private Animator anim;
+    public GameObject endLevelPanel;
     
     // Use this for initialization
 	void Start () {
+
+        anim = endLevelPanel.GetComponent<Animator>();
+        anim.enabled = false;
 	
 	}
 	
@@ -19,14 +24,17 @@ public class EndArea_NBM : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
+            Debug.Log("Touched End Space");
             PauseGameEnd();
         }
     }
 
-    public static void PauseGameEnd()
+    public void PauseGameEnd()
     {
 
         Time.timeScale = 0;
+        anim.enabled = true;
+        anim.Play("PauseMenuSlideIn");
 
     }
 
