@@ -25,11 +25,11 @@ public class EndArea_NBM : MonoBehaviour {
         if (other.tag == "Player")
         {
             Debug.Log("Touched End Space");
-            PauseGameEnd();
+            EndLevelPauseGame();
         }
     }
 
-    public void PauseGameEnd()
+    public void EndLevelPauseGame()
     {
 
         Time.timeScale = 0;
