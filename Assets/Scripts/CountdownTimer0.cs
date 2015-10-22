@@ -2,20 +2,19 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class CountdownTimer : MonoBehaviour {
+public class CountdownTimer0 : MonoBehaviour {
 
     public Text countdownText;
+    private Animator anim;
+    public GameObject pauseMenuPanel;
+
     static float seconds, minutes;
     //
     //This variable adujst the amount of time allowed for the level.
     //Since seconds are added at runtime minutes will appear as one minute less than
     //minutes inserted i.e. 5 minute timer will display 4:59 at runtime
     public float lengthOfTimeInMinutes = 5f;
-    private Animator anim;
-    public GameObject pauseMenuPanel;
-
-    //private bool isPaused = false;
-
+    
 
     //public float totalTime = 60f;
     // Use this for initialization
@@ -24,7 +23,6 @@ public class CountdownTimer : MonoBehaviour {
         countdownText = GetComponent<Text>() as Text;
         anim = pauseMenuPanel.GetComponent<Animator>();
         anim.enabled = false;
-        //Time.timeScale = 1;
     }
 
     // Update is called once per frame
@@ -38,11 +36,11 @@ public class CountdownTimer : MonoBehaviour {
         seconds = (int)((-Time.timeSinceLevelLoad % 60f) + 60f);
 
         //make the clock stop at 00:00
-        if (minutes == 0f && seconds <= 1f)
+        if (minutes == 0 && seconds <= 1)
         {
             seconds = 0;
             PauseGame();
-            
+            //anim.enabled = true;
         }
 
         countdownText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
@@ -50,20 +48,15 @@ public class CountdownTimer : MonoBehaviour {
         
     }
 
-    public void PauseGame()
+    public static void PauseGame()
     {
-        //enable the animator component
-        anim.enabled = true;
-        //play the Slidein animation
-        anim.Play("FailPauseMenuSlideIn");
-        //set the isPaused flag to true to indicate that the game is paused
-        //isPaused = true;
-        //freeze the timescale
+
         Time.timeScale = 0;
+        
+        
     }
 
-
-    public void ResumeGame()
+    public static void ResumeGame()
     {
         Time.timeScale = 1;
     }
