@@ -5,6 +5,9 @@ using UnityEngine.UI;
 public class CountdownTimer : MonoBehaviour {
 
     public Text countdownText;
+    private Animator anim;
+    public GameObject pauseMenuPanel;
+
     static float seconds, minutes;
     //
     //This variable adujst the amount of time allowed for the level.
@@ -18,6 +21,8 @@ public class CountdownTimer : MonoBehaviour {
     void Start()
     {
         countdownText = GetComponent<Text>() as Text;
+        anim = pauseMenuPanel.GetComponent<Animator>();
+        anim.enabled = false;
     }
 
     // Update is called once per frame
@@ -35,6 +40,7 @@ public class CountdownTimer : MonoBehaviour {
         {
             seconds = 0;
             PauseGame();
+            //anim.enabled = true;
         }
 
         countdownText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
@@ -46,6 +52,7 @@ public class CountdownTimer : MonoBehaviour {
     {
 
         Time.timeScale = 0;
+        
         
     }
 
