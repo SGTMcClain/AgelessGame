@@ -1,0 +1,157 @@
+fileFormatVersion: 2
+guid: 976dfcb63a4f57448b07d394f2a3c34e
+timeCreated: 1446071051
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Platform_Walkway_Grass
+    100004: Road002
+    100006: Rocks1
+    100008: Rocks2
+    100010: Rocks3
+    100012: Rocks4
+    100014: Rocks5
+    100016: Rocks6
+    100018: Rocks_Base1
+    100020: Rocks_Base2
+    100022: Rocks_Base3
+    100024: Rocks_Base4
+    100026: Rocks_Base5
+    100028: Rocks_Base6
+    100030: Rocks_Base7
+    100032: Rocks_Base8
+    100034: Rocks_Bottom
+    400000: //RootNode
+    400002: Platform_Walkway_Grass
+    400004: Road002
+    400006: Rocks1
+    400008: Rocks2
+    400010: Rocks3
+    400012: Rocks4
+    400014: Rocks5
+    400016: Rocks6
+    400018: Rocks_Base1
+    400020: Rocks_Base2
+    400022: Rocks_Base3
+    400024: Rocks_Base4
+    400026: Rocks_Base5
+    400028: Rocks_Base6
+    400030: Rocks_Base7
+    400032: Rocks_Base8
+    400034: Rocks_Bottom
+    2300000: Platform_Walkway_Grass
+    2300002: Road002
+    2300004: Rocks1
+    2300006: Rocks2
+    2300008: Rocks3
+    2300010: Rocks4
+    2300012: Rocks5
+    2300014: Rocks6
+    2300016: Rocks_Base1
+    2300018: Rocks_Base2
+    2300020: Rocks_Base3
+    2300022: Rocks_Base4
+    2300024: Rocks_Base5
+    2300026: Rocks_Base6
+    2300028: Rocks_Base7
+    2300030: Rocks_Base8
+    2300032: Rocks_Bottom
+    3300000: Platform_Walkway_Grass
+    3300002: Road002
+    3300004: Rocks1
+    3300006: Rocks2
+    3300008: Rocks3
+    3300010: Rocks4
+    3300012: Rocks5
+    3300014: Rocks6
+    3300016: Rocks_Base1
+    3300018: Rocks_Base2
+    3300020: Rocks_Base3
+    3300022: Rocks_Base4
+    3300024: Rocks_Base5
+    3300026: Rocks_Base6
+    3300028: Rocks_Base7
+    3300030: Rocks_Base8
+    3300032: Rocks_Bottom
+    4300000: Platform_Walkway_Grass
+    4300002: Rocks1
+    4300004: Rocks2
+    4300006: Rocks3
+    4300008: Rocks4
+    4300010: Rocks5
+    4300012: Rocks6
+    4300014: Rocks_Base1
+    4300016: Rocks_Base2
+    4300018: Rocks_Base3
+    4300020: Rocks_Base4
+    4300022: Rocks_Base5
+    4300024: Rocks_Base6
+    4300026: Rocks_Base7
+    4300028: Rocks_Base8
+    4300030: Rocks_Bottom
+    4300032: Road002
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
