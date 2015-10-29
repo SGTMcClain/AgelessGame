@@ -4,8 +4,8 @@ using UnityEngine.UI;
 
 public class CountdownTimer : MonoBehaviour {
 
-    public Text countdownText;
-    static float seconds, minutes;
+    public static Text countdownText;
+    public static float seconds, minutes;
     //
     //This variable adujst the amount of time allowed for the level.
     //Since seconds are added at runtime minutes will appear as one minute less than
