@@ -203,8 +203,21 @@ public class CharacterSwitch : MonoBehaviour
         disableBaby = true;
         disableOld = false;
     }
-    
-    
+//Switch Pads
+	
+	void OnTriggerEnter (Collider other)
+	{
+		if (other.tag ==  "BabySwap") 
+		 {
+			EnableBaby ();
+		
+		
+		}
+		
+	}
+
+
+
 
 }
 
