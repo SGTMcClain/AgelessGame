@@ -38,7 +38,7 @@ public class BreakingPlatform : MonoBehaviour
 
 
     //breaks the platform if Teen or Elderly
-    void OnTriggerEnter(Collider other)
+    void OnTriggerStay(Collider other)
     {
         if (other.gameObject.name == modelTeen.name || other.gameObject.name == modelElderly.name)
         {
@@ -92,7 +92,7 @@ public class BreakingPlatform : MonoBehaviour
     IEnumerator waitToReform()
 
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(6);
         mPlatform.gameObject.SetActive(true);
         
     }

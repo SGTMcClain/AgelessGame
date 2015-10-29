@@ -1,12 +1,13 @@
 fileFormatVersion: 2
 guid: 23308c0601943534a96a33a3dc712a8d
-timeCreated: 1446070401
+timeCreated: 1446093915
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - modelTeen: {fileID: 100000, guid: c0712a80a56e0004497e5099aec62974, type: 3}
-  - modelElderly: {fileID: 100168, guid: b235179bd2a63d1468dd430670338c55, type: 3}
+  - modelElderly: {fileID: 158178, guid: d743c7bdd68d3c545afc8f1ecb1f957d, type: 2}
+  - mPlatform: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
