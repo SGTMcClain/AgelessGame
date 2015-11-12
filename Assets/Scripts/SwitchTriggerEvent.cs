@@ -42,7 +42,8 @@ public class SwitchTriggerEvent : MonoBehaviour {
       {
             //Enter what you want the trigger to do here
             //example for door - set how you want to door to move/swing by changing the x, y, or z for Vector3
-            eventDoor.transform.Translate(new Vector3(0.0f, 0.0f, 0.0f));
+            eventDoor.transform.Translate(new Vector3(0.0f, 0.0f, 0.0f)); // or for swinging doors eventDoor.transform.Rotate(new Vector3(0.0f, 0.0f, 0.0f));
+
         }
     }
 
