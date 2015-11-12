@@ -42,4 +42,8 @@ public class EndArea_NBM : MonoBehaviour {
     {
         Time.timeScale = 1;
     }
-}
+	}
+
+
+
+
