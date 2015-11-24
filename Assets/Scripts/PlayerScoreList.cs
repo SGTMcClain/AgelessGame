@@ -3,7 +3,11 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class PlayerScoreList : MonoBehaviour {
+    //all code commented out until ScoreManager is completed
+    //also ScoreManagerwScoreboard.cs contains the complete working code
+    //if a point of reference is needed.
 
+    /*
     public GameObject playerScoreEntryPrefab;
 
     ScoreManager scoreManager;
@@ -55,4 +59,5 @@ public class PlayerScoreList : MonoBehaviour {
             go.transform.Find("Trials").GetComponent<Text>().text = scoreManager.GetScore(name, "trials").ToString();
         }
     }
+    */
 }

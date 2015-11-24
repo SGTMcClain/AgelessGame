@@ -48,6 +48,7 @@ public class CountdownTimer : MonoBehaviour {
         countdownText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
 
         
+        
     }
 
     public void PauseGame()

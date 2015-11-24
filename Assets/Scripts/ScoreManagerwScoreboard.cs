@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq; //Check documentation on this
 using UnityEngine.UI;
 
-public class ScoreManager : MonoBehaviour {
+public class ScoreManagerwScoreboard : MonoBehaviour {
 
     //We need some sort of map that goes from a USERNAME to a SCORE
     //The map we are building is going to look like:
@@ -15,33 +15,46 @@ public class ScoreManager : MonoBehaviour {
     int changeCounter = 0;
     public Text scoreText;
 
-    string playTime; //holds the time after it has been converted to a string
+    string playTime;
 
     void Start()
     {
         scoreText = GetComponent <Text>() as Text;
-              
+        playTime = PlayerPrefs.GetString("PlayerTime");
+
+        SetScore("quill18", "time", 9000);
+        SetScore("quill18", "trials", 15);
+
+        SetScore("Joel2015", "time", 2000);
+        SetScore("Joel2015", "trials", 9001);
+
+        SetScore("AAAAAAA", "time", 0);
+        SetScore("AAAAAAA", "trials", 0);
+
+        SetScore("BBBBBBB", "time", 0);
+
+        SetScore("CCCCCC", "time", 4321);
+        SetScore("CCCCCC", "trials", 1234);
+
+
+
+        Debug.Log(GetScore("quill18", "kills"));
+
         //PlayerPref
+
+        PlayerPrefs.GetString("PlayerTime");
         playTime = PlayerPrefs.GetString("PlayerTime");
     }
 
     void Update()
     {
-        PlayerPrefs.SetString("PlayerTime", CountdownTimer.countdownText.text);  //Every update, update the PlayerPref "PlayerTime" with the current time
-        scoreText.text = "Completed with " + playTime + " Time Remaining";  //Change default text in inspector to this line
+        PlayerPrefs.SetString("PlayerTime", CountdownTimer.countdownText.text);
+        scoreText.text = "Completed with " + playTime + " Time Remaining";
         Debug.Log(PlayerPrefs.GetString("PlayerTime"));
     }
 
-    // Code below contains elements for creating a scoreboard
-    // This needs to be adjusted to match the above code
-    // Ultimately this should allow for the current playerpref to be used as a variable
-    // when initializing the scoreboard and then compare that score with other scores
-    // a problem that may arize is the fact that time had to be converted to a string so we 
-    // may need to pass the raw numerical data to the scoreboard with the
-    // string data so that the code sees the score represented numerically while the
-    // player sees the playTime string which would make more sense to a human
-    // This way we should still be able to sort the data behind the scenes.
-    /*void Init()
+
+    void Init()
     {
         if (playerScores != null)
             return;
@@ -112,5 +125,4 @@ public class ScoreManager : MonoBehaviour {
     {
         return changeCounter;
     }
-    */
 }
