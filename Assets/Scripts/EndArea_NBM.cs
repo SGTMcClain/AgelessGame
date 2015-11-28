@@ -3,15 +3,18 @@ using System.Collections;
 
 public class EndArea_NBM : MonoBehaviour {
 
-    public GameObject Player;
+    public GameObject player;
     private Animator anim;
     public GameObject endLevelPanel;
+    private PlayerInventory playerInventory; 
     
     // Use this for initialization
 	void Start () {
 
         anim = endLevelPanel.GetComponent<Animator>();
         anim.enabled = false;
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerInventory = player.GetComponent<PlayerInventory>();
 	
 	}
 	
@@ -22,10 +25,14 @@ public class EndArea_NBM : MonoBehaviour {
 
     void OnTriggerEnter (Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" &&  playerInventory.hasSeed)
         {
             Debug.Log("Touched End Space");
             PauseGameEnd();
+        }
+        else
+        {
+            Debug.Log("You don't have the seed");
         }
     }
 
