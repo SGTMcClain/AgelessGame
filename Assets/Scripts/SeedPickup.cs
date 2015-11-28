@@ -3,14 +3,14 @@ using System.Collections;
 
 public class SeedPickup : MonoBehaviour {
 
-   // public AudioClip seedGrab;  //AudioClip to play when the seed is grabbed
+    public AudioClip seedGrab;  //AudioClip to play when the seed is grabbed
     private GameObject player;  //Reference to the player
     private PlayerInventory playerInventory; //Reference to the players inventory
    	
 	void Awake () {
 
         player = GameObject.FindGameObjectWithTag("Player");
-        playerInventory = player.GetComponent<PlayerInventory>();
+        //playerInventory = player.GetComponent<PlayerInventory>();
 	
 	}
 
@@ -23,8 +23,8 @@ public class SeedPickup : MonoBehaviour {
             //AudioSource.PlayClipAtPoint(seedGrab, transform.position);
 
             // ... the player has a key ...
-            playerInventory.hasSeed = true;
-
+            playerInventory.hasSeed = true;  
+         
             // ... and destroy this gameobject.
             Destroy(gameObject);
 

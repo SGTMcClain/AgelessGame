@@ -25,7 +25,10 @@ public class EndArea_NBM : MonoBehaviour {
 
     void OnTriggerEnter (Collider other)
     {
-        if (other.tag == "Player" &&  playerInventory.hasSeed)
+        Debug.Log("Collider is: " + other.gameObject.CompareTag("Player"));
+        Debug.Log("The Player has seed: " + playerInventory.hasSeed);
+
+        if (other.gameObject.CompareTag("Player") &&  playerInventory.hasSeed)
         {
             Debug.Log("Touched End Space");
             PauseGameEnd();
