@@ -13,7 +13,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         private Vector3 m_Move;
         private bool m_Jump;                      // the world-relative desired move direction, calculated from the camForward and user input.
         public bool canCrouch = true;  //David - allows to set if the character can crouch in inspector.
-        
+        public bool canJump = true; 
         private void Start()
         {
             // get the transform of the main camera
@@ -35,7 +35,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         private void Update()
         {
-            if (!m_Jump)
+            if (!m_Jump && canJump== true)
             {
                 m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
             }
