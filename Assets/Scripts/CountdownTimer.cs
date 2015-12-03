@@ -6,6 +6,8 @@ public class CountdownTimer : MonoBehaviour {
 
     public static Text countdownText;
     public static float seconds, minutes;
+    public static int cTimerMin;
+    public static int cTimerSec;
     //
     //This variable adujst the amount of time allowed for the level.
     //Since seconds are added at runtime minutes will appear as one minute less than
@@ -46,9 +48,11 @@ public class CountdownTimer : MonoBehaviour {
         }
 
         countdownText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
+        cTimerMin = (int)minutes;
+        cTimerSec = (int)seconds;
 
-        
-        
+
+
     }
 
     public void PauseGame()
