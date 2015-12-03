@@ -44,7 +44,7 @@ public class EndArea_NBM : MonoBehaviour {
 
         Time.timeScale = 0;
         anim.enabled = true;
-        anim.Play("PauseMenuSlideIn");
+        anim.Play("FailPauseMenuSlideIn");
 
     }
 
