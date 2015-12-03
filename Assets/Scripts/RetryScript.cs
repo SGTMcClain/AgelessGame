@@ -11,16 +11,12 @@ public class RetryScript : MonoBehaviour {
 
     public void NextLevel()
     {
-        if (nextLevelInBuildSettings > 0)
-        {
+        
+        
             Application.LoadLevel(nextLevelInBuildSettings);
-        }
+        
      
-        else
-        {
-            Application.LoadLevel(Application.loadedLevel);
-            
-        }
+    
     }
 
     public void QuitGame()
