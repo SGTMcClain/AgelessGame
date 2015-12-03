@@ -23,7 +23,7 @@ public class SeedPickup : MonoBehaviour {
             //AudioSource.PlayClipAtPoint(seedGrab, transform.position);
 
             // ... the player has a key ...
-            playerInventory.hasSeed = true;  
+            playerInventory.hasSeed = true; 
          
             // ... and destroy this gameobject.
             Destroy(gameObject);
