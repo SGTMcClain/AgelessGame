@@ -372,7 +372,7 @@ ModelImporter:
       scale: {x: .420000017, y: .420000046, z: .420000046}
       transformModified: 1
     - name: metarig|hips
-      position: {x: -0, y: .0551999994, z: .848772228}
+      position: {x: -0, y: .0552000031, z: .848772228}
       rotation: {x: .778972507, y: -1.68449485e-08, z: -2.09258939e-08, w: .627058089}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
@@ -382,7 +382,7 @@ ModelImporter:
       scale: {x: 1, y: .999999821, z: 1.00000012}
       transformModified: 1
     - name: metarig|chest
-      position: {x: 1.76214855e-16, y: .284337729, z: 4.07453626e-09}
+      position: {x: 1.76214868e-16, y: .284337729, z: 4.07453626e-09}
       rotation: {x: -.128920868, y: 1.71432095e-08, z: 2.52264698e-08, w: .991654932}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
@@ -392,7 +392,7 @@ ModelImporter:
       scale: {x: 1, y: .999999881, z: 1}
       transformModified: 1
     - name: metarig|head
-      position: {x: -5.75903927e-15, y: .190328106, z: -3.7252903e-09}
+      position: {x: -5.75903969e-15, y: .190328121, z: -3.7252903e-09}
       rotation: {x: -.0291725807, y: 2.48652494e-08, z: 9.24414234e-09, w: .999574423}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
@@ -417,17 +417,17 @@ ModelImporter:
       scale: {x: .999999881, y: .999999821, z: 1}
       transformModified: 1
     - name: metarig|palm.01.L
-      position: {x: .0140996343, y: .0370976143, z: -.00437765382}
+      position: {x: .0140996352, y: .0370976143, z: -.00437765382}
       rotation: {x: .00949125364, y: .0429077372, z: -.118635483, w: .991964996}
       scale: {x: .999999881, y: .999999881, z: .999999702}
       transformModified: 1
     - name: metarig|f_index.01.L
-      position: {x: 1.11758709e-08, y: .0696259737, z: 1.01514161e-07}
+      position: {x: 1.11758709e-08, y: .0696259737, z: 1.01514168e-07}
       rotation: {x: .161726102, y: -.0852411389, z: .086520195, w: .979332864}
       scale: {x: .999999881, y: .999999881, z: .999999762}
       transformModified: 1
     - name: metarig|f_index.02.L
-      position: {x: 1.11758709e-08, y: .0450400561, z: -6.56582415e-08}
+      position: {x: 1.11758709e-08, y: .0450400598, z: -6.56582415e-08}
       rotation: {x: .0776128247, y: -.00216863398, z: .0064760102, w: .996960223}
       scale: {x: .999999881, y: .999999881, z: .999999881}
       transformModified: 1
@@ -442,17 +442,17 @@ ModelImporter:
       scale: {x: .999999881, y: 1, z: 1}
       transformModified: 1
     - name: metarig|thumb.02.L
-      position: {x: -3.79513949e-08, y: .0608890876, z: 6.47269189e-08}
+      position: {x: -3.79513985e-08, y: .0608890876, z: 6.47269189e-08}
       rotation: {x: .0950759351, y: .0378997214, z: -.0456437282, w: .993700564}
       scale: {x: .99999994, y: .999999821, z: .99999994}
       transformModified: 1
     - name: metarig|thumb.03.L
-      position: {x: 1.77271431e-07, y: .0205155592, z: 3.50410119e-08}
+      position: {x: 1.77271446e-07, y: .0205155611, z: 3.50410119e-08}
       rotation: {x: -.138548702, y: -.217169166, z: .0855061486, w: .962460637}
       scale: {x: .999999821, y: .999999881, z: 1.00000012}
       transformModified: 1
     - name: metarig|palm.02.L
-      position: {x: -.00228701439, y: .0411204137, z: -.00781360082}
+      position: {x: -.00228701439, y: .0411204174, z: -.00781360082}
       rotation: {x: -.00419963757, y: .0251930393, z: -.0767458901, w: .996723533}
       scale: {x: 1.00000012, y: .99999994, z: .99999994}
       transformModified: 1
@@ -482,7 +482,7 @@ ModelImporter:
       scale: {x: 1, y: 1.00000012, z: 1}
       transformModified: 1
     - name: metarig|f_ring.02.L
-      position: {x: 5.12227416e-09, y: .0448166691, z: 1.55065209e-07}
+      position: {x: 5.12227416e-09, y: .0448166728, z: 1.55065209e-07}
       rotation: {x: .0737291425, y: .0103869392, z: .0222062096, w: .996976972}
       scale: {x: .99999994, y: .99999994, z: .999999881}
       transformModified: 1
@@ -522,17 +522,17 @@ ModelImporter:
       scale: {x: .99999994, y: 1, z: 1.00000012}
       transformModified: 1
     - name: metarig|forearm.R
-      position: {x: 1.42026693e-07, y: .240320385, z: -7.4505806e-09}
+      position: {x: 1.42026693e-07, y: .240320399, z: -7.4505806e-09}
       rotation: {x: .0565443598, y: -.0828960612, z: .0427777953, w: .994032741}
       scale: {x: .99999994, y: 1.00000012, z: 1.00000012}
       transformModified: 1
     - name: metarig|hand.R
-      position: {x: 4.19095159e-08, y: .227273747, z: 9.77888703e-09}
+      position: {x: 4.19095159e-08, y: .227273762, z: 9.77888792e-09}
       rotation: {x: -.0371897593, y: .724995494, z: .0516732521, w: .685804963}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: metarig|palm.01.R
-      position: {x: -.0133303907, y: .0520957261, z: -.00201734295}
+      position: {x: -.0133303916, y: .0520957261, z: -.00201734295}
       rotation: {x: .00370840542, y: -.0605110563, z: .115344197, w: .991473854}
       scale: {x: .99999994, y: .99999994, z: .99999994}
       transformModified: 1
@@ -547,7 +547,7 @@ ModelImporter:
       scale: {x: .99999994, y: .999999881, z: 1.00000012}
       transformModified: 1
     - name: metarig|f_index.03.R
-      position: {x: 1.86264515e-08, y: .0282180086, z: -4.19095159e-09}
+      position: {x: 1.86264515e-08, y: .0282180104, z: -4.19095159e-09}
       rotation: {x: .11357747, y: .0248961858, z: -.0319055766, w: .99270457}
       scale: {x: .99999994, y: .999999821, z: .999999881}
       transformModified: 1
@@ -557,7 +557,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1.00000012}
       transformModified: 1
     - name: metarig|thumb.02.R
-      position: {x: 2.46800482e-08, y: .053081464, z: -1.47148967e-07}
+      position: {x: 2.46800482e-08, y: .0530814677, z: -1.47148967e-07}
       rotation: {x: -.0907838717, y: .152358964, z: -.0305448957, w: .983672738}
       scale: {x: .999999881, y: .999999702, z: .999999881}
       transformModified: 1
@@ -582,7 +582,7 @@ ModelImporter:
       scale: {x: 1.00000012, y: 1, z: .999999762}
       transformModified: 1
     - name: metarig|f_middle.03.R
-      position: {x: -0, y: .0321911126, z: 2.01398507e-08}
+      position: {x: -0, y: .0321911126, z: 2.01398525e-08}
       rotation: {x: .0580226369, y: -.00662183436, z: -.0197427031, w: .998098075}
       scale: {x: .99999994, y: .999999881, z: .99999994}
       transformModified: 1
@@ -597,7 +597,7 @@ ModelImporter:
       scale: {x: 1, y: 1.00000012, z: 1.00000012}
       transformModified: 1
     - name: metarig|f_ring.02.R
-      position: {x: 9.31322575e-10, y: .0448166803, z: -5.07570803e-08}
+      position: {x: 9.31322575e-10, y: .0448166803, z: -5.07570839e-08}
       rotation: {x: .0736769512, y: -.00912051648, z: -.0223883111, w: .996989131}
       scale: {x: 1.00000012, y: 1, z: 1.00000012}
       transformModified: 1
@@ -607,7 +607,7 @@ ModelImporter:
       scale: {x: .99999994, y: 1, z: 1}
       transformModified: 1
     - name: metarig|palm.04.R
-      position: {x: .0338677615, y: .0524402633, z: -.00339778326}
+      position: {x: .0338677615, y: .0524402633, z: -.0033977835}
       rotation: {x: -.00648188498, y: .0447329469, z: -.0550153442, w: .997461915}
       scale: {x: 1, y: .999999881, z: 1}
       transformModified: 1
@@ -617,7 +617,7 @@ ModelImporter:
       scale: {x: 1.00000012, y: 1, z: 1.00000024}
       transformModified: 1
     - name: metarig|f_pinky.02.R
-      position: {x: -2.98023224e-08, y: .0278763603, z: 1.37835741e-07}
+      position: {x: -2.98023224e-08, y: .0278763622, z: 1.37835741e-07}
       rotation: {x: .0437628478, y: -.00546870288, z: -.0157703366, w: .9989025}
       scale: {x: 1, y: .999999762, z: .999999881}
       transformModified: 1
@@ -632,22 +632,22 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1.00000024}
       transformModified: 1
     - name: metarig|shin.L
-      position: {x: -6.07329875e-09, y: .322975904, z: -1.32597151e-08}
+      position: {x: -6.0732992e-09, y: .322975934, z: -1.32597151e-08}
       rotation: {x: .221216261, y: 1.01109787e-08, z: -4.9223928e-08, w: .975224793}
       scale: {x: 1, y: 1.00000012, z: 1}
       transformModified: 1
     - name: metarig|foot.L
-      position: {x: 1.00385105e-08, y: .44426617, z: 7.71892417e-09}
+      position: {x: 1.00385114e-08, y: .44426617, z: 7.71892417e-09}
       rotation: {x: -.56649375, y: -1.93827788e-07, z: 2.47487748e-07, w: .824066043}
       scale: {x: 1, y: .999999881, z: .999999881}
       transformModified: 1
     - name: metarig|toe.L
-      position: {x: 2.23039862e-08, y: .129245564, z: -1.79224457e-09}
+      position: {x: 2.2303988e-08, y: .129245564, z: -1.79224457e-09}
       rotation: {x: -1.03024895e-07, y: .961248696, z: -.275682718, w: -2.97024371e-07}
       scale: {x: 1, y: .99999994, z: 1.00000012}
       transformModified: 1
     - name: metarig|heel.L
-      position: {x: 1.00385105e-08, y: .44426617, z: 7.71892417e-09}
+      position: {x: 1.00385114e-08, y: .44426617, z: 7.71892417e-09}
       rotation: {x: -9.01958401e-07, y: .96774739, z: .251922607, w: -3.63873096e-06}
       scale: {x: 1, y: .999999702, z: 1.00000024}
       transformModified: 1
@@ -662,12 +662,12 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1.00000024}
       transformModified: 1
     - name: metarig|shin.R
-      position: {x: -5.28050403e-09, y: .322975904, z: -1.10600311e-08}
+      position: {x: -5.28050448e-09, y: .322975934, z: -1.1060032e-08}
       rotation: {x: .221216261, y: 3.23996758e-08, z: -4.24248192e-08, w: .975224793}
       scale: {x: 1, y: 1.00000012, z: 1}
       transformModified: 1
     - name: metarig|foot.R
-      position: {x: -1.18476251e-08, y: .444266111, z: -3.21891491e-09}
+      position: {x: -1.18476251e-08, y: .44426614, z: -3.21891491e-09}
       rotation: {x: -.56649375, y: -2.15908614e-07, z: 2.3230848e-07, w: .824066043}
       scale: {x: 1, y: .999999881, z: .999999881}
       transformModified: 1
@@ -677,7 +677,7 @@ ModelImporter:
       scale: {x: 1, y: .99999994, z: 1.00000012}
       transformModified: 1
     - name: metarig|heel.R
-      position: {x: -1.18476251e-08, y: .444266111, z: -3.21891491e-09}
+      position: {x: -1.18476251e-08, y: .44426614, z: -3.21891491e-09}
       rotation: {x: 9.3203596e-07, y: .96774739, z: .251922607, w: 3.40019619e-06}
       scale: {x: 1, y: .999999702, z: 1.00000024}
       transformModified: 1
