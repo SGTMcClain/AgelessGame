@@ -171,9 +171,20 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			// apply extra gravity from multiplier:
 			Vector3 extraGravityForce = (Physics.gravity * m_GravityMultiplier) - Physics.gravity;
 			m_Rigidbody.AddForce(extraGravityForce);
+            if (Input.GetKey(KeyCode.D))
+            {
 
-			//m_GroundCheckDistance = m_Rigidbody.velocity.y < 0 ? m_OrigGroundCheckDistance : 0.01f;
-		}
+                this.transform.Translate(Time.deltaTime * 3, 0, 0, Camera.main.transform);
+            }
+
+            if (Input.GetKey(KeyCode.A))
+            {
+
+                this.transform.Translate(Time.deltaTime * -3, 0, 0, Camera.main.transform);
+            }
+
+            //m_GroundCheckDistance = m_Rigidbody.velocity.y < 0 ? m_OrigGroundCheckDistance : 0.01f;
+        }
 
 
 		void HandleGroundedMovement(bool crouch, bool jump)
@@ -186,7 +197,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				m_IsGrounded = false;
 				m_Animator.applyRootMotion = false;
 				m_GroundCheckDistance = 0.1f;
-			}
+                
+            }
 		}
 
 		void ApplyExtraTurnRotation()
