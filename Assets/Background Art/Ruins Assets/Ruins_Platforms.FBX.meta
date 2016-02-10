@@ -112,6 +112,27 @@ ModelImporter:
     4300036: Platform020
     4300038: Platform019
     4300040: Platform021
+    6400000: Platform001
+    6400002: Platform002
+    6400004: Platform003
+    6400006: Platform004
+    6400008: Platform005
+    6400010: Platform006
+    6400012: Platform007
+    6400014: Platform008
+    6400016: Platform009
+    6400018: Platform010
+    6400020: Platform011
+    6400022: Platform012
+    6400024: Platform013
+    6400026: Platform014
+    6400028: Platform015
+    6400030: Platform016
+    6400032: Platform017
+    6400034: Platform018
+    6400036: Platform019
+    6400038: Platform020
+    6400040: Platform021
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -138,7 +159,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
@@ -169,8 +190,10 @@ ModelImporter:
     legStretch: .0500000007
     feetSpacing: 0
     rootMotionBoneName: 
+    hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
+  humanoidOversampling: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
