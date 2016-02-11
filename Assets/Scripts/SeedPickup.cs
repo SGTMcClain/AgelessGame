@@ -10,7 +10,7 @@ public class SeedPickup : MonoBehaviour {
 	void Awake () {
 
         player = GameObject.FindGameObjectWithTag("Player");
-        playerInventory = player.GetComponent<PlayerInventory>();
+        //playerInventory = player.GetComponent<PlayerInventory>();
 	
 	}
 
