@@ -6,18 +6,19 @@ public class Soil : MonoBehaviour {
 	public GameObject player;
 	public GameObject m_Vine;
 	public GameObject m_Tree;
-//	public GameObject minorsoil;
-	private PlayerInventory_JG playerInventory; 
+    public GameObject m_GrowTree;
+    private PlayerInventory_JG playerInventory;
+    private TreeOn PlantEnable;
 
 
 
 	// Use this for initialization
 	void Start () {
-
 		player = GameObject.FindGameObjectWithTag("Player");
 		m_Vine = GameObject.FindGameObjectWithTag("Vine");
 		m_Tree = GameObject.FindGameObjectWithTag("Tree");
 		playerInventory = player.GetComponent<PlayerInventory_JG>();
+        PlantEnable = m_Tree.GetComponent<TreeOn>();
 
 	}
 	
@@ -44,11 +45,10 @@ public class Soil : MonoBehaviour {
 		{
 			if (Input.GetKeyDown (KeyCode.G)) { 
 				
-				if (playerInventory.VineSeed)
-				{
-					m_Vine.SetActive(true);
+				
+					TreeOn.Vine.setActive(true);
 					Debug.Log("Vine Seed Planted");
-				}
+				
 			}
 		}
 		else
@@ -60,12 +60,11 @@ public class Soil : MonoBehaviour {
 		{
 			if (Input.GetKeyDown (KeyCode.H)) { 
 				
-				if (playerInventory.TreeSeed)
-				{
+				
 					m_Tree.SetActive(true);
 					Debug.Log("Tree Seed Planted");
 				}
-			}
+
 		}
 		else
 		{

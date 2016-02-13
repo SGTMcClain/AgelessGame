@@ -46,7 +46,7 @@ public class SeedPickup_JG : MonoBehaviour {
 			playerInventory.VineSeed = true; 
 			
 			// ... and destroy this gameobject.
-			Destroy(gameObject);
+			Destroy(other.gameObject);
 			
 			Debug.Log("Vine Seed Touched");
 		}
@@ -60,7 +60,7 @@ public class SeedPickup_JG : MonoBehaviour {
 			playerInventory.TreeSeed = true; 
 			
 			// ... and destroy this gameobject.
-			Destroy(gameObject);
+			Destroy(other.gameObject);
 			
 			Debug.Log("Tree Seed Touched");
 		}
