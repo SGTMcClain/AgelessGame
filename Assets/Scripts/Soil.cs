@@ -4,8 +4,8 @@ using System.Collections;
 public class Soil : MonoBehaviour {
 
 	public GameObject player;
-	private GameObject m_Vine;
-	private GameObject m_Tree;
+	public GameObject m_Vine;
+	public GameObject m_Tree;
 
     private PlayerInventory_JG playerInventory;
 //  private TreeOn PlantEnable;
@@ -15,9 +15,9 @@ public class Soil : MonoBehaviour {
     // Use this for initialization
     void Start () {
 		player = GameObject.FindGameObjectWithTag("Player");
-        m_Vine = GameObject.FindGameObjectWithTag("Vine");
-		m_Tree = GameObject.FindGameObjectWithTag("Tree");
-		playerInventory = player.GetComponent<PlayerInventory_JG>();
+        m_Vine = m_Vine.gameObject;
+		m_Tree = m_Tree.gameObject;
+        playerInventory = player.GetComponent<PlayerInventory_JG>();
     //    PlantEnable = GetComponent<TreeOn>();
      //   PlantEnable = GetComponent<TreeOn>();
     }
