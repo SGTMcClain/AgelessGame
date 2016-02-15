@@ -5,18 +5,18 @@ public class SeedPickup_JG : MonoBehaviour {
 
     //public AudioClip seedGrab;  //AudioClip to play when the seed is grabbed
     private GameObject player;  //Reference to the player
-	public GameObject m_VineSeed;  //Reference to the player
-	public GameObject m_TreeSeed;
+//	private GameObject m_VineSeed;  
+	private GameObject m_TreeSeed;
 	private PlayerInventory_JG playerInventory; //Reference to the players inventory
 
 	void Awake () {
 
         player = GameObject.FindGameObjectWithTag("Player");
 		m_TreeSeed = GameObject.FindGameObjectWithTag("TreeSeed");
-		m_VineSeed = GameObject.FindGameObjectWithTag("VineSeed");
+//		m_VineSeed = GameObject.FindGameObjectWithTag("VineSeed");
 		playerInventory = player.GetComponent<PlayerInventory_JG>();
 
-		//playerInventory = player.GetComponent<PlayerInventory>();
+
 	
 	}
 
@@ -37,7 +37,7 @@ public class SeedPickup_JG : MonoBehaviour {
             Debug.Log("Seed Touched");
         }
 */
-		if (other.gameObject.CompareTag("VineSeed"))
+/*		if (other.gameObject.CompareTag("Player") && m_VineSeed)
 		{
 			// ... play the clip at the position of the key...
 			//AudioSource.PlayClipAtPoint(seedGrab, transform.position);
@@ -46,12 +46,12 @@ public class SeedPickup_JG : MonoBehaviour {
 			playerInventory.VineSeed = true; 
 			
 			// ... and destroy this gameobject.
-			Destroy(other.gameObject);
+			Destroy(gameObject);
 			
 			Debug.Log("Vine Seed Touched");
 		}
-
-		if (other.gameObject.CompareTag("TreeSeed"))
+*/
+		if (other.gameObject.CompareTag("Player"))
 		{
 			// ... play the clip at the position of the key...
 			//AudioSource.PlayClipAtPoint(seedGrab, transform.position);
@@ -60,7 +60,7 @@ public class SeedPickup_JG : MonoBehaviour {
 			playerInventory.TreeSeed = true; 
 			
 			// ... and destroy this gameobject.
-			Destroy(other.gameObject);
+			Destroy(gameObject);
 			
 			Debug.Log("Tree Seed Touched");
 		}
