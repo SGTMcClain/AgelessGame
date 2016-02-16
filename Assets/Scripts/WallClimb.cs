@@ -7,8 +7,7 @@ public class WallClimb : MonoBehaviour
     
     public GameObject modelElder;
     public Rigidbody rElder;
-
-  public ThirdPersonCharacter grounded; 
+    public ThirdPersonCharacter grounded; 
 
 
     // Use this for initialization

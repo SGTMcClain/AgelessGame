@@ -6,17 +6,21 @@ public class Soil : MonoBehaviour {
 	public GameObject player;
 	public GameObject m_Vine;
 	public GameObject m_Tree;
+    public GameObject m_TreeSeed;
+    public GameObject m_VineSeed;
 
-    private PlayerInventory_JG playerInventory;
+    public PlayerInventory_JG playerInventory;
 //  private TreeOn PlantEnable;
-    public bool disableTree;
-    public bool disableVine;
+//    public bool disableTree;
+  //  public bool disableVine;
 
     // Use this for initialization
     void Start () {
-		player = GameObject.FindGameObjectWithTag("Player");
+		player = player.gameObject;
         m_Vine = m_Vine.gameObject;
 		m_Tree = m_Tree.gameObject;
+        m_TreeSeed = m_TreeSeed.gameObject;
+        m_VineSeed = m_VineSeed.gameObject;
         playerInventory = player.GetComponent<PlayerInventory_JG>();
     //    PlantEnable = GetComponent<TreeOn>();
      //   PlantEnable = GetComponent<TreeOn>();
@@ -35,30 +39,42 @@ public class Soil : MonoBehaviour {
 	
 } */	
 
-	void OnTriggerEnter (Collider other)
+	void OnTriggerStay ()
 	{
-	//	Debug.Log("Collider is: " + other.gameObject.CompareTag("Player"));
+		Debug.Log("Collider is: " + player.gameObject);
 	//	Debug.Log("The Player has seed: " + playerInventory.VineSeed);
-	//	Debug.Log("The Player has seed: " + playerInventory.TreeSeed);
-
-		if (Input.GetKeyDown(KeyCode.G) && other.gameObject.CompareTag("Player") &&  playerInventory.TreeSeed)
+		Debug.Log("The Player has tree seed: " + playerInventory.TreeSeed);
+       
+        if (playerInventory.TreeSeed == true)
 		{
-				
-                EnableTree();
-				
-			
-		}
+            if (Input.GetKeyDown(KeyCode.H))
+            {
+                m_Vine.SetActive(false);
+                m_Tree.SetActive(true);
+                m_TreeSeed.SetActive(true);
+                playerInventory.TreeSeed = false;
+
+            }
+
+        }
 		else
 		{
 			Debug.Log("You don't have the Tree Seed");
 		}
 
-		if (Input.GetKeyDown(KeyCode.H) && other.gameObject.CompareTag("Player") &&  playerInventory.VineSeed)
-		{
+        if (playerInventory.VineSeed == true)
+        {
+            if (Input.GetKeyDown(KeyCode.G))
+            {
+                m_Tree.SetActive(false);
+                m_Vine.SetActive(true);
+                m_VineSeed.SetActive(true);
+                playerInventory.VineSeed = false;
 
-             EnableVine();
-		}
-		else
+            }
+
+        }
+        else
 		{
 			Debug.Log("You don't have the Vine Seed");
 		}
@@ -72,13 +88,11 @@ public class Soil : MonoBehaviour {
 
 
         //makes sure the code will not execute unless the correct plants are either enabled or disabled.
-        if (disableTree == false && disableVine == true)
+        if (m_Tree == false)
         {
 
             m_Tree.SetActive(true); //Joel - sets tree to active, works the same for baby and adult in EnableBaby() and EnableOld() etc.
 
-            // Joel - disables Vine.
-            m_Vine.SetActive(false);
 
         }
 
@@ -91,13 +105,10 @@ public class Soil : MonoBehaviour {
 
 
         //makes sure the code will not execute unless the correct plants are either enabled or disabled.
-        if (disableTree == true && disableVine == false)
+        if (Input.GetKeyDown(KeyCode.H))
         {
 
             m_Vine.SetActive(true); //Joel - sets tree to active, works the same for baby and adult in EnableBaby() and EnableOld() etc.
-
-            // Joel - diables Tree.
-            m_Tree.SetActive(false);
 
         }
 
