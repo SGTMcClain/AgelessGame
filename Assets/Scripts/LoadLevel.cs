@@ -20,4 +20,15 @@ public class LoadLevel
 	{
 		Application.Quit();
 	}
+
+	public void MainMenu()
+	{
+		Application.LoadLevel (0);
+	}
+
+	public void StageSelect()
+	{
+		Application.LoadLevel ("StageSelect");
+	}
+
 }
