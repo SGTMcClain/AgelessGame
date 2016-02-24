@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Soil : MonoBehaviour {
+public class Soil_JG : MonoBehaviour {
 
 	public GameObject player;
 	public GameObject m_Vine;
@@ -47,15 +47,13 @@ public class Soil : MonoBehaviour {
        
         if (playerInventory.TreeSeed == true)
 		{
-			if (Input.GetKeyDown(KeyCode.H))
+            if (Input.GetKeyDown(KeyCode.H))
             {
-				if (playerInventory.Water >= 1) {
-				m_Vine.SetActive(false);
+                m_Vine.SetActive(false);
                 m_Tree.SetActive(true);
                 m_TreeSeed.SetActive(true);
                 playerInventory.TreeSeed = false;
-				playerInventory.Water -= 1;
-				}
+
             }
 
         }
@@ -66,17 +64,12 @@ public class Soil : MonoBehaviour {
 
         if (playerInventory.VineSeed == true)
         {
-			if (Input.GetKeyDown(KeyCode.G ))
+            if (Input.GetKeyDown(KeyCode.G))
             {
-				if (playerInventory.Water >= 1)
-				{
-                
-					m_Tree.SetActive(false);
-                	m_Vine.SetActive(true);
-                	m_VineSeed.SetActive(true);
-                	playerInventory.VineSeed = false;
-					playerInventory.Water -= 1;
-				}
+                m_Tree.SetActive(false);
+                m_Vine.SetActive(true);
+                m_VineSeed.SetActive(true);
+				playerInventory.VineSeed = false;
 
             }
 
