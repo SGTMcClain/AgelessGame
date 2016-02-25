@@ -13,17 +13,22 @@ public class CameraFollow : MonoBehaviour
    public GameObject switchBaby;     
    public GameObject switchTeen;
    public GameObject switchOld;
-   
-
+   public PlayerInventory_JG playerInventory;
+   public GameObject player;
+    public CharacterSwitch c_switch;
 
     Vector3 targetPos;
     // David - gets the intial position and loads the models/gameobjects at start that was set in inspecter
     void Start()
     {
         targetPos = transform.position;
-        
-        
-
+        playerInventory = player.GetComponent<PlayerInventory_JG>();
+        player = player.gameObject;
+        switchBaby = switchBaby.gameObject;
+        switchTeen = switchTeen.gameObject;
+        switchOld = switchOld.gameObject;
+        c_switch = player.GetComponent<CharacterSwitch>();
+  
     }
     // David - code for finding the target character and allowing the camera to follow
     void FixedUpdate()
@@ -40,31 +45,44 @@ public class CameraFollow : MonoBehaviour
     }
 
 
-   // David - switches the camera to lock on to the specific character with the buttons that match from Character Switch
+    // David - switches the camera to lock on to the specific character with the buttons that match from Character Switch
+    // Joel - Each of the if statements below now checks if the forms are active in the scene heiarchy
+    // joel- Readjusted this section of code so the script now switches between form if they are active
+    // Joel-  Implementing water broke the script and would not allow for a complete switch, the camera would remain locked on certain forms 
+
     void Update()
     {
 
-        
         //David - switch to baby
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-       {
-            target = switchBaby;
-           
-        }
-
+      
+        /* if (Input.GetKeyDown(KeyCode.Alpha1) )
+            {*/
+        if (switchBaby.activeInHierarchy/*c_switch.disableTeen == false || c_switch.disableOld == false && c_switch.disableBaby == true*/ )
+              {
+                target = switchBaby;
+                }
+            //}
         //David - switch to teen
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-     {
-            
-            target = switchTeen;
-            
-        }
 
+        /*   if (Input.GetKeyDown(KeyCode.Alpha2))
+
+               {*/
+            if (switchTeen.activeInHierarchy/*c_switch.disableBaby == false || c_switch.disableOld == false && c_switch.disableTeen == true */)
+            {
+                target = switchTeen;
+            }
+           // }
+        
         //David - switch to adult
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
+       
+          /*  if (Input.GetKeyDown(KeyCode.Alpha3) )
+            {*/
+            if (switchOld.activeInHierarchy/*c_switch.disableTeen == false || c_switch.disableBaby == false && c_switch.disableOld == true*/ )
+            {
+                target = switchOld;
+            }
             
-            target = switchOld;
-        }
-    }
+            //}
+
+       }
 }

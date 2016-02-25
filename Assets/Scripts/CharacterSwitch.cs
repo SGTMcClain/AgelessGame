@@ -28,6 +28,8 @@ public class CharacterSwitch : MonoBehaviour
     public bool disableTeen; 
     public bool disableBaby;
     public bool disableOld;
+    public PlayerInventory_JG playerInventory;
+    //public CameraFollow m_camera;
 
 
 
@@ -41,7 +43,8 @@ public class CharacterSwitch : MonoBehaviour
         baby = baby.gameObject;
         teen = teen.gameObject;
         old = old.gameObject;
-       
+        playerInventory = GetComponent<PlayerInventory_JG>();
+      //  m_camera = GetComponent<CameraFollow>();
 
     }
 
@@ -54,36 +57,59 @@ public class CharacterSwitch : MonoBehaviour
 
     {
 
+        
+            if (Input.GetKeyDown(KeyCode.Alpha1) && (disableTeen == false || disableOld == false && disableBaby == true))
+            {
+            if (playerInventory.Water >= 1)
+            {
+                playerInventory.Water -= 1;
+                EnableBaby();
 
-        if (Input.GetKeyDown(KeyCode.Alpha1) && ( disableTeen == false || disableOld == false && disableBaby == true))
-        {
-
-            EnableBaby();
-            
-
-            
-
-        }
-
-
-
-        if (Input.GetKeyDown(KeyCode.Alpha2) && (disableBaby == false || disableOld == false && disableTeen == true))
-        {
-
-
-            EnableTeen();
-            
+            }
+            else
+            {
+                Debug.Log("You don't have enough Water");
+            }
 
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha3) && (disableTeen == false || disableBaby ==  false && disableOld == true))
-        {
+       
 
+        
 
-            EnableOld();
+            if (Input.GetKeyDown(KeyCode.Alpha2) && (disableBaby == false || disableOld == false && disableTeen == true))
+            {
+                if (playerInventory.Water >= 1)
+                 {
+                  playerInventory.Water -= 1;
+                  EnableTeen();
+                }
 
-
+              else
+             {
+                  Debug.Log("You don't have any Water");
+             }
         }
+
+
+        
+
+      
+            if (Input.GetKeyDown(KeyCode.Alpha3) && (disableTeen == false || disableBaby == false && disableOld == true))
+            {
+            if (playerInventory.Water >= 1)
+            {
+                playerInventory.Water -= 1;
+                EnableOld();
+
+            }
+            else
+            {
+                Debug.Log("You don't have enough Water");
+            }
+        }
+
+        
 
 
 
@@ -137,7 +163,7 @@ public class CharacterSwitch : MonoBehaviour
 
     // David - Allows the Baby to be enabled and disables the other characters
 
-    void EnableBaby()
+ void EnableBaby()
     {
         
 

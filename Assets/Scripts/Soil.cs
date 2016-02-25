@@ -49,13 +49,19 @@ public class Soil : MonoBehaviour {
 		{
 			if (Input.GetKeyDown(KeyCode.H))
             {
-				if (playerInventory.Water >= 1) {
-				m_Vine.SetActive(false);
-                m_Tree.SetActive(true);
-                m_TreeSeed.SetActive(true);
-                playerInventory.TreeSeed = false;
-				playerInventory.Water -= 1;
+				if (playerInventory.Water >= 1)
+                {
+				    m_Vine.SetActive(false);
+                    m_Tree.SetActive(true);
+                    m_TreeSeed.SetActive(true);
+                    playerInventory.TreeSeed = false;
+				    playerInventory.Water -= 1;
 				}
+                else
+                {
+                    Debug.Log("You don't have enough Water");
+                }
+
             }
 
         }
@@ -77,6 +83,10 @@ public class Soil : MonoBehaviour {
                 	playerInventory.VineSeed = false;
 					playerInventory.Water -= 1;
 				}
+                else
+                {
+                    Debug.Log("You don't have enough Water");
+                }
 
             }
 
