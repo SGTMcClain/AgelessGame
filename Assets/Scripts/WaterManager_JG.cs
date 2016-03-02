@@ -1,9 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class WaterManager_JG : MonoBehaviour
 {
 	public float water = 10f;                         // How much health the player has left.
+	public float maxWater = 10f;
+	public float minWater = 0f;
+	public float addWaterAmt = 1f;
+	public float takeWaterAmt = 1f;
+
 //	public float resetAfterDeathTime = 5f;              // How much time from the player dying to the level reseting.
 //	public AudioClip deathClip;                         // The sound effect of the player dying.
 	
@@ -89,14 +95,47 @@ public class WaterManager_JG : MonoBehaviour
 	}
 	
 */
+	void Update(){
+		UI_WaterMeter ();
+		UI_WaterCheck ();
+
+	}
 	public void TakeAway (float amount)
 	{
 		// Decrement the player's water.
-		water-= 1;
+		water-= takeWaterAmt;
+			
 	}
 	public void Add (float amount)
 	{
 		// Add to the player's water.
-		water+= 1;
+		water+= addWaterAmt;
+			
 	}
+	public void UI_WaterMeter(){
+		Image image = GetComponent<Image> ();
+		image.fillAmount = water / maxWater;
+		Debug.Log ("current water is: " + image.fillAmount);
+
+		//Test
+		if(Input.GetButtonDown("WaterTestUP")){
+			water++;
+		}
+
+		if(Input.GetButtonDown("WaterTestDOWN")){
+			water--;
+		}
+
+
+	}
+
+	public void UI_WaterCheck(){
+		if (water > maxWater){
+			water = maxWater;
+		}
+		if (water < minWater){
+			water = minWater;
+		}
+	}
+
 }
