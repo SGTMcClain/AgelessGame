@@ -1,0 +1,129 @@
+fileFormatVersion: 2
+guid: 4cf63d729e39ed043abe2d5f573fc61a
+timeCreated: 1457559476
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Tree
+    21300002: SideGrass
+    21300004: grass5_0
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Tree
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 94
+        width: 510
+        height: 270
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 125, y: -45}
+        - {x: 128, y: -36}
+        - {x: 128, y: 19}
+        - {x: 105, y: 120}
+        - {x: 73, y: 133}
+        - {x: -144, y: 133}
+        - {x: -167, y: 72}
+        - {x: -203, y: 52}
+        - {x: -202, y: 20}
+        - {x: -215, y: 0}
+        - {x: -215, y: -54}
+        - {x: -157, y: -77}
+        - {x: -85, y: -68}
+        - {x: -89, y: -110}
+        - {x: -83, y: -123}
+        - {x: 5, y: -123}
+        - {x: 8, y: -116}
+        - {x: -16, y: -89}
+        - {x: 9, y: -52}
+    - name: SideGrass
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 378
+        width: 511
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -239.5, y: 44}
+        - {x: -239.5, y: -6}
+        - {x: -227.5, y: -32}
+        - {x: -124.5, y: -10}
+        - {x: -96.5, y: 0}
+        - {x: -86.5, y: -38}
+        - {x: 200.5, y: -38}
+        - {x: 216.5, y: -8}
+        - {x: 221.5, y: 12}
+        - {x: 221.5, y: 44}
+    - name: grass5_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -214, y: 30}
+        - {x: -224, y: 28}
+        - {x: -233, y: 25}
+        - {x: -233, y: -47}
+        - {x: 247, y: -47}
+        - {x: 247, y: 26}
+        - {x: 239, y: 30}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
