@@ -14,11 +14,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		[SerializeField] float m_RunCycleLegOffset = 0.2f; //specific to the character in sample assets, will need to be modified to work with others
 		[SerializeField] float m_MoveSpeedMultiplier = 1f;
 		[SerializeField] float m_AnimSpeedMultiplier = 1f;
-		[SerializeField] float m_GroundCheckDistance = 0.1f;
+		[SerializeField] float m_GroundCheckDistance;
 
 		Rigidbody m_Rigidbody;
 		Animator m_Animator;
 		public bool m_IsGrounded;
+        bool moveLocked;
 		float m_OrigGroundCheckDistance;
 		const float k_Half = 0.5f;
 		float m_TurnAmount;
@@ -68,7 +69,24 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			if (m_IsGrounded)
 			{
 				HandleGroundedMovement(crouch, jump);
-			}
+
+                if (move.magnitude == 0f && !moveLocked) //if there is no player directional input (while grounded)
+                {
+                    m_Rigidbody.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation; ; //lock rigidbody's x/z position
+                                                                                                                                                                   //#### New bit to stop falling over :)
+                                                                                                                                                                   // m_Rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
+                                                                                                                                                                   //####
+                    moveLocked = true;
+                }
+                else if (move.magnitude != 0f && moveLocked)
+                {
+                    m_Rigidbody.constraints = RigidbodyConstraints.None; //remove all constraints
+                    m_Rigidbody.constraints = RigidbodyConstraints.FreezeRotation; //add back original rotational constraints
+                    moveLocked = false;
+                }
+
+
+            }
 			else
 			{
 				HandleAirborneMovement();
@@ -171,33 +189,41 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			// apply extra gravity from multiplier:
 			Vector3 extraGravityForce = (Physics.gravity * m_GravityMultiplier) - Physics.gravity;
 			m_Rigidbody.AddForce(extraGravityForce);
-            if (Input.GetKey(KeyCode.D))
+
+            if (Input.GetKey(KeyCode.D)) // David - allows to have some control in air
             {
 
                 this.transform.Translate(Time.deltaTime * 3, 0, 0, Camera.main.transform);
             }
 
-            if (Input.GetKey(KeyCode.A))
+            if (Input.GetKey(KeyCode.A))  // David - allows to have some control in air
             {
 
                 this.transform.Translate(Time.deltaTime * -3, 0, 0, Camera.main.transform);
             }
 
+
             //m_GroundCheckDistance = m_Rigidbody.velocity.y < 0 ? m_OrigGroundCheckDistance : 0.01f;
         }
 
 
-		void HandleGroundedMovement(bool crouch, bool jump)
-		{
-			// check whether conditions are right to allow a jump:
-			if (jump && !crouch && m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Grounded"))
-			{
-				// jump!
-				m_Rigidbody.velocity = new Vector3(m_Rigidbody.velocity.x, m_JumpPower, m_Rigidbody.velocity.z);
-				m_IsGrounded = false;
-				m_Animator.applyRootMotion = false;
-				m_GroundCheckDistance = 0.1f;
-                
+		void HandleGroundedMovement(bool crouch, bool jump) 
+        {
+            // check whether conditions are right to allow a jump:
+            if (jump && !crouch && m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Grounded"))
+            {
+                // jump!
+                m_Rigidbody.velocity = new Vector3(m_Rigidbody.velocity.x, m_JumpPower, m_Rigidbody.velocity.z);
+                m_IsGrounded = false;
+                m_Animator.applyRootMotion = false;
+                m_GroundCheckDistance = 0.1f;
+
+            }
+
+            else
+            {
+
+                m_GroundCheckDistance = m_OrigGroundCheckDistance;
             }
 		}
 
