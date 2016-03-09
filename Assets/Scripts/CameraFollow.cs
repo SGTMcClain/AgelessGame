@@ -28,6 +28,7 @@ public class CameraFollow : MonoBehaviour
         switchTeen = switchTeen.gameObject;
         switchOld = switchOld.gameObject;
         c_switch = player.GetComponent<CharacterSwitch>();
+        
   
     }
     // David - code for finding the target character and allowing the camera to follow
