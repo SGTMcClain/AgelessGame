@@ -5,15 +5,19 @@ public class SeedPickup_JG : MonoBehaviour {
 
     //public AudioClip seedGrab;  //AudioClip to play when the seed is grabbed
     public GameObject player;  //Reference to the player
-	public GameObject m_VineSeed;  
+	public GameObject m_VineSeed;
 	public GameObject m_TreeSeed;
 	public PlayerInventory_JG playerInventory; //Reference to the players inventory
+
+	public GameObject GUI_VineSeed;
+	public GameObject GUI_TreeSeed;
 
 	void Awake () {
         player = player.gameObject;
 		m_TreeSeed = m_TreeSeed.gameObject;
         m_VineSeed = m_VineSeed.gameObject;
         playerInventory = player.GetComponent<PlayerInventory_JG>();
+
 
 
 	
@@ -46,6 +50,7 @@ public class SeedPickup_JG : MonoBehaviour {
 
             // ... and destroy this gameobject.
             gameObject.SetActive(false);
+			GUI_VineSeed.SetActive (true);
 
             Debug.Log("Vine Seed Touched");
 		}
@@ -60,6 +65,7 @@ public class SeedPickup_JG : MonoBehaviour {
 
             // ... and destroy this gameobject.
             gameObject.SetActive(false);
+			GUI_TreeSeed.SetActive (true);
 
             Debug.Log("Tree Seed Touched");
 		}
