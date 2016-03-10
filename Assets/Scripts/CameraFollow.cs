@@ -4,8 +4,8 @@ using System.Collections;
 public class CameraFollow : MonoBehaviour
 {
     public float interpVelocity; // David - variable for how fast the camera will lag behind
-   // public float minDistance; // David - not used. Useful if we add camera controls.
-   // public float followDistance; // David - not used. More useful for "behind the back." Left in here because can turn into camera lag when used with interpVelocity.
+   // public float minDistance; // David - not used. Useful if we add camera controls. for controlling Zoom distance
+   public float followSpeed = 90; // David - not used. More useful for "behind the back." Left in here because can turn into camera lag when used with interpVelocity. Default is 90
     public GameObject target; // David -the current target the camera is following
     public Vector3 offset;
    
@@ -39,7 +39,7 @@ public class CameraFollow : MonoBehaviour
             Vector3 posNoZ = transform.position;
             posNoZ.z = target.transform.position.z;
             Vector3 targetDirection = (target.transform.position - posNoZ);
-            interpVelocity = targetDirection.magnitude * 90f; // David - how much the camera lags behind character
+            interpVelocity = targetDirection.magnitude * followSpeed; // David - how much the camera lags behind character - 90F to keep the camera locked on character, replace with followDistance if you want to control inspector
             targetPos = transform.position + (targetDirection.normalized * interpVelocity * Time.deltaTime);
             transform.position = Vector3.Lerp(transform.position, targetPos + offset, 0.25f);
         }
