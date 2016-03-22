@@ -2,8 +2,6 @@
 using System.Collections;
 
 
-
-
 //[RequireComponent(typeof(CameraFollow))] <-------if we find out that we need to tie this script to the camera. Not needed for now.
 
 /* Summary - script for character switching in-game. Allows the selection of models in inspector for "baby," "teen," and "old." Important if model names are changed. 
@@ -28,11 +26,10 @@ public class CharacterSwitch : MonoBehaviour
     public bool disableTeen; 
     public bool disableBaby;
     public bool disableOld;
-    public PlayerInventory_JG playerInventory;
+   // public PlayerInventory_JG playerInventory;
+	public WaterManager_JG w_meter;
+
     //public CameraFollow m_camera;
-
-
-
 
     // David - at start looks for what gameObjects/models in inspector that we designate as "Baby" "Teen" "Old" passes them to the variable. 
     //StartingCharacter should be the starting character when the level begins. 
@@ -43,14 +40,13 @@ public class CharacterSwitch : MonoBehaviour
         baby = baby.gameObject;
         teen = teen.gameObject;
         old = old.gameObject;
-        playerInventory = GetComponent<PlayerInventory_JG>();
+       // playerInventory = GetComponent<PlayerInventory_JG>();
+		//w_meter = GetComponent<WaterManager_JG>();
       //  m_camera = GetComponent<CameraFollow>();
 
     }
 
    
- 
-
     // David - Takes the input of the key "1" "2" or "3" and enables the character for the key pressed
 
     void Update()
@@ -60,9 +56,9 @@ public class CharacterSwitch : MonoBehaviour
         
             if (Input.GetKeyDown(KeyCode.Alpha1) && (disableTeen == false || disableOld == false && disableBaby == true))
             {
-            if (playerInventory.Water >= 1)
+			if (w_meter.water >= 1f)
             {
-                playerInventory.Water -= 1;
+				w_meter.water--;
                 EnableBaby();
 
             }
@@ -79,9 +75,9 @@ public class CharacterSwitch : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Alpha2) && (disableBaby == false || disableOld == false && disableTeen == true))
             {
-                if (playerInventory.Water >= 1)
+			if (w_meter.water >= 1f)
                  {
-                  playerInventory.Water -= 1;
+				w_meter.water -= 1f;
                   EnableTeen();
                 }
 
@@ -97,9 +93,9 @@ public class CharacterSwitch : MonoBehaviour
       
             if (Input.GetKeyDown(KeyCode.Alpha3) && (disableTeen == false || disableBaby == false && disableOld == true))
             {
-            if (playerInventory.Water >= 1)
+			if (w_meter.water >= 1f)
             {
-                playerInventory.Water -= 1;
+				w_meter.water -= 1f;
                 EnableOld();
 
             }

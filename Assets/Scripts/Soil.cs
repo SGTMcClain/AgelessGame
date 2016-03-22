@@ -8,8 +8,9 @@ public class Soil : MonoBehaviour {
 	public GameObject m_Tree;
     public GameObject m_TreeSeed;
     public GameObject m_VineSeed;
-
+	public WaterManager_JG w_meter;
     public PlayerInventory_JG playerInventory;
+
 //  private TreeOn PlantEnable;
 //    public bool disableTree;
   //  public bool disableVine;
@@ -22,7 +23,9 @@ public class Soil : MonoBehaviour {
         m_TreeSeed = m_TreeSeed.gameObject;
         m_VineSeed = m_VineSeed.gameObject;
         playerInventory = player.GetComponent<PlayerInventory_JG>();
-    //    PlantEnable = GetComponent<TreeOn>();
+		//w_meter = GetComponent<WaterManager_JG>();
+
+		//    PlantEnable = GetComponent<TreeOn>();
      //   PlantEnable = GetComponent<TreeOn>();
     }
 	
@@ -41,21 +44,23 @@ public class Soil : MonoBehaviour {
 
 	void OnTriggerStay ()
 	{
-		Debug.Log("Collider is: " + player.gameObject);
+	
+		//IF WE USE ONTRIGGERSTAY WE CANNOT PRINT OUT A MESSAGE TO THE CONSOLE OTHERWISE IT CAUSES A MEMORY LEAK
+	//	Debug.Log("Collider is: " + player.gameObject);
 	//	Debug.Log("The Player has seed: " + playerInventory.VineSeed);
-		Debug.Log("The Player has tree seed: " + playerInventory.TreeSeed);
+	//	Debug.Log("The Player has tree seed: " + playerInventory.TreeSeed);
        
         if (playerInventory.TreeSeed == true)
 		{
 			if (Input.GetKeyDown(KeyCode.H))
             {
-				if (playerInventory.Water >= 1)
+				if (w_meter.water >= 1f)
                 {
 				    m_Vine.SetActive(false);
                     m_Tree.SetActive(true);
                     m_TreeSeed.SetActive(true);
                     playerInventory.TreeSeed = false;
-				    playerInventory.Water -= 1;
+					w_meter.water -= 1f;
 				}
                 else
                 {
@@ -74,14 +79,14 @@ public class Soil : MonoBehaviour {
         {
 			if (Input.GetKeyDown(KeyCode.G ))
             {
-				if (playerInventory.Water >= 1)
+				if (w_meter.water >= 1f)
 				{
                 
 					m_Tree.SetActive(false);
                 	m_Vine.SetActive(true);
                 	m_VineSeed.SetActive(true);
                 	playerInventory.VineSeed = false;
-					playerInventory.Water -= 1;
+					w_meter.water -= 1f;
 				}
                 else
                 {

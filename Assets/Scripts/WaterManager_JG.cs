@@ -4,11 +4,17 @@ using UnityEngine.UI;
 
 public class WaterManager_JG : MonoBehaviour
 {
+	
 	public float water = 10f;                         // How much health the player has left.
 	public float maxWater = 10f;
 	public float minWater = 0f;
 	public float addWaterAmt = 1f;
 	public float takeWaterAmt = 1f;
+
+	//public PlayerInventory_JG playerInventory;
+
+//original script items above
+
 
 //	public float resetAfterDeathTime = 5f;              // How much time from the player dying to the level reseting.
 //	public AudioClip deathClip;                         // The sound effect of the player dying.
@@ -22,20 +28,24 @@ public class WaterManager_JG : MonoBehaviour
 //	private float timer;                                // A timer for counting to the reset of the level once the player is dead.
 //	private bool playerDead;                            // A bool to show if the player is dead or not.
 	
-	
-	void Awake ()
-	{
+
+
+//	void Awake ()
+//	{
 		// Setting up the references.
 //		anim = GetComponent<Animator>();
 //		playerMovement = GetComponent<PlayerMovement>();
 //		hash = GameObject.FindGameObjectWithTag(Tags.gameController).GetComponent<HashIDs>();
 //		sceneFadeInOut = GameObject.FindGameObjectWithTag(Tags.fader).GetComponent<SceneFadeInOut>();
 //		lastPlayerSighting = GameObject.FindGameObjectWithTag(Tags.gameController).GetComponent<LastPlayerSighting>();
-	}
+//	}
 	
-/*
+	/*
 	void Update ()
 	{
+		//playerInventory = player.GetComponent<PlayerInventory_JG>();
+     
+
 		// If health is less than or equal to 0...
 		if(health <= 0f)
 		{
@@ -50,7 +60,8 @@ public class WaterManager_JG : MonoBehaviour
 				LevelReset();
 			}
 		}
-	}
+
+	} 
 	
 
 	void PlayerDying ()
