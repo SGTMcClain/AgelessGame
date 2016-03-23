@@ -18,8 +18,6 @@ public class SeedPickup_JG : MonoBehaviour {
         m_VineSeed = m_VineSeed.gameObject;
         playerInventory = player.GetComponent<PlayerInventory_JG>();
 
-
-
 	
 	}
 
@@ -40,20 +38,20 @@ public class SeedPickup_JG : MonoBehaviour {
             Debug.Log("Seed Touched");
         }
 */
-	if (other.gameObject.CompareTag("Player") && m_VineSeed)
-		{
+		if (other.gameObject.CompareTag ("Player") && m_VineSeed) {
 			// ... play the clip at the position of the key...
 			//AudioSource.PlayClipAtPoint(seedGrab, transform.position);
 			
 			// ... the player has a key ...
 			playerInventory.VineSeed = true;
 
-            // ... and destroy this gameobject.
-            gameObject.SetActive(false);
+			// ... and destroy this gameobject.
+			gameObject.SetActive (false);
 			GUI_VineSeed.SetActive (true);
 
-            Debug.Log("Vine Seed Touched");
+			Debug.Log ("Vine Seed Touched");
 		}
+
 
 		if (other.gameObject.CompareTag("Player") && m_TreeSeed)
 		{
@@ -69,17 +67,8 @@ public class SeedPickup_JG : MonoBehaviour {
 
             Debug.Log("Tree Seed Touched");
 		}
-
-
-
-
-
-
+			
 
     }
-
-
-
-
-
+		
 }

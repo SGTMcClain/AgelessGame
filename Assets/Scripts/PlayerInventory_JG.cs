@@ -7,6 +7,20 @@ public class PlayerInventory_JG : MonoBehaviour {
 
 	public bool VineSeed;
 	public bool TreeSeed;
+	public GameObject GUI_VineSeed;
+	public GameObject GUI_TreeSeed;
+
+	void Update() {
+		if(TreeSeed == false)
+			{
+				GUI_TreeSeed.SetActive (false);
+			}
+
+		if(VineSeed == false)
+		{
+			GUI_VineSeed.SetActive (false);
+		}
+	}
 
 
 	//Water Manager Code
