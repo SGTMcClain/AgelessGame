@@ -126,7 +126,7 @@ public class WaterManager_JG : MonoBehaviour
 	public void UI_WaterMeter(){
 		Image image = GetComponent<Image> ();
 		image.fillAmount = water / maxWater;
-		Debug.Log ("current water is: " + image.fillAmount);
+		//Debug.Log ("current water is: " + image.fillAmount);
 
 		//Test
 		if(Input.GetButtonDown("WaterTestUP")){

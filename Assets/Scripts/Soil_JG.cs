@@ -53,13 +53,14 @@ public class Soil_JG : MonoBehaviour {
                 m_Tree.SetActive(true);
                 m_TreeSeed.SetActive(true);
                 playerInventory.TreeSeed = false;
+				playerInventory.useTreeSeed ();
 
             }
 
         }
 		else
 		{
-			Debug.Log("You don't have the Tree Seed");
+			//Debug.Log("You don't have the Tree Seed");
 		}
 
         if (playerInventory.VineSeed == true)
@@ -70,13 +71,14 @@ public class Soil_JG : MonoBehaviour {
                 m_Vine.SetActive(true);
                 m_VineSeed.SetActive(true);
 				playerInventory.VineSeed = false;
+				playerInventory.useVineSeed();
 
             }
 
         }
         else
 		{
-			Debug.Log("You don't have the Vine Seed");
+			//Debug.Log("You don't have the Vine Seed");
 		}
 
 

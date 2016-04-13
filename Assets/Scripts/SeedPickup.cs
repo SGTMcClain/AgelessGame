@@ -29,6 +29,7 @@ public class SeedPickup : MonoBehaviour {
             Destroy(gameObject);
 
             Debug.Log("Seed Touched");
+			playerInventory.useTreeSeed ();
         }
     }
 }

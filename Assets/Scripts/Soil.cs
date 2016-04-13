@@ -68,7 +68,7 @@ public class Soil : MonoBehaviour {
                     m_TreeSeed.SetActive(true);
                     playerInventory.TreeSeed = false;
 					w_meter.water -= 1f;
-
+					playerInventory.useTreeSeed ();
 				}
                 else
                 {
@@ -80,7 +80,7 @@ public class Soil : MonoBehaviour {
         }
 		else
 		{
-			Debug.Log("You don't have the Tree Seed");
+			//Debug.Log("You don't have the Tree Seed");
 		}
 
         if (playerInventory.VineSeed == true)
@@ -95,6 +95,7 @@ public class Soil : MonoBehaviour {
                 	m_VineSeed.SetActive(true);
                 	playerInventory.VineSeed = false;
 					w_meter.water -= 1f;
+					playerInventory.useVineSeed ();
 				
 				}
                 else
@@ -107,7 +108,7 @@ public class Soil : MonoBehaviour {
         }
         else
 		{
-			Debug.Log("You don't have the Vine Seed");
+			//Debug.Log("You don't have the Vine Seed");
 		}
 
 

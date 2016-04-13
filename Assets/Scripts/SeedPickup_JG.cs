@@ -44,6 +44,7 @@ public class SeedPickup_JG : MonoBehaviour {
 			
 			// ... the player has a key ...
 			playerInventory.VineSeed = true;
+			playerInventory.collectVineSeed();
 
 			// ... and destroy this gameobject.
 			gameObject.SetActive (false);

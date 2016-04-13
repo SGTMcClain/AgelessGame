@@ -7,20 +7,63 @@ public class PlayerInventory_JG : MonoBehaviour {
 
 	public bool VineSeed;
 	public bool TreeSeed;
+
 	public GameObject GUI_VineSeed;
 	public GameObject GUI_TreeSeed;
 
+	public static int TreeSeedCounter = 0;
+	public static int VineSeedCounter = 0;
+	public bool hasSeed;
+
+
+	public void collectTreeSeed(){
+		
+		++TreeSeedCounter;
+		Debug.Log ("Collected a TreeSeed. Current TreeSeed = " + TreeSeedCounter);
+	}
+
+	public void collectVineSeed(){
+		++VineSeedCounter;
+		Debug.Log ("Collected a VineSeed.  Current VineSeed = " + VineSeedCounter);
+		Debug.Log ("Current TreeSeed = " + TreeSeedCounter);
+
+
+	}
+
+	public void useTreeSeed(){
+		--TreeSeedCounter;
+		if (TreeSeedCounter < 1){
+			GUI_TreeSeed.SetActive (false);
+		}
+		Debug.Log ("Used a TreeSeed.  Current TreeSeed = " + TreeSeedCounter);
+
+	}
+
+	public void useVineSeed(){
+		--VineSeedCounter;
+		if (VineSeedCounter < 1){
+			GUI_VineSeed.SetActive (false);
+		}
+		Debug.Log ("Used a VineSeed.  Current VineSeed = " + VineSeedCounter);
+
+	}
+
 	void Update() {
+		
 		if(TreeSeed == false)
 			{
 				GUI_TreeSeed.SetActive (false);
 			}
 
+
 		if(VineSeed == false)
 		{
 			GUI_VineSeed.SetActive (false);
 		}
+
+
 	}
+		
 
 
 	//Water Manager Code
