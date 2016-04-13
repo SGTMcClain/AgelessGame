@@ -11,13 +11,6 @@ public class Soil : MonoBehaviour {
 	public WaterManager_JG w_meter;
     public PlayerInventory_JG playerInventory;
 
-	public GameObject GUI_VineSeed;
-	public GameObject GUI_TreeSeed;
-
-
-
-
-
 //  private TreeOn PlantEnable;
 //    public bool disableTree;
   //  public bool disableVine;
@@ -66,9 +59,8 @@ public class Soil : MonoBehaviour {
 				    m_Vine.SetActive(false);
                     m_Tree.SetActive(true);
                     m_TreeSeed.SetActive(true);
-                    playerInventory.TreeSeed = false;
+                 //   playerInventory.TreeSeed = false;
 					w_meter.water -= 1f;
-
 				}
                 else
                 {
@@ -93,9 +85,8 @@ public class Soil : MonoBehaviour {
 					m_Tree.SetActive(false);
                 	m_Vine.SetActive(true);
                 	m_VineSeed.SetActive(true);
-                	playerInventory.VineSeed = false;
+          //      	playerInventory.VineSeed = false;
 					w_meter.water -= 1f;
-				
 				}
                 else
                 {
