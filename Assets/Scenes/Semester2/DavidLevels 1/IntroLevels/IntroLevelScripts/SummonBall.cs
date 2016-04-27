@@ -8,9 +8,9 @@ public class SummonBall : MonoBehaviour {
     bool ballActive;
 	// Use this for initialization
 	void Start () {
-        magicBall.transform.localPosition = spawnPoint.transform.position;
-        ballActive = false;
-        
+        //  magicBall.transform.localPosition = spawnPoint.transform.position;
+        // ballActive = false;
+        magicBall.transform.position = spawnPoint.transform.localPosition;
     }
 	
 	// Update is called once per frame
@@ -18,9 +18,9 @@ public class SummonBall : MonoBehaviour {
         
         if (ballActive ==false && Input.GetKeyDown(KeyCode.E))
         {
-           magicBall.transform.localPosition = spawnPoint.transform.position;
+          
             magicBall.SetActive(true);
-            
+            magicBall.transform.position = spawnPoint.transform.position;
             ballActive = true;
         }
 
