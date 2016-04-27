@@ -72,13 +72,13 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
                 if (move.magnitude == 0f && !moveLocked) //if there is no player directional input (while grounded)
                 {
-                    m_Rigidbody.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation; ; //lock rigidbody's x/z position 
+                    m_Rigidbody.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;  //lock rigidbody's x/z position 
                                                                                                                                                                    //#### New bit to stop falling over :)
                                                                                                                                                                    // m_Rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
                                                                                                                                                                    //####
                     moveLocked = true;
                 }
-                else if (move.magnitude != 0f && moveLocked)
+                else if (move.magnitude != 0f && moveLocked || jump)
                 {
                     m_Rigidbody.constraints = RigidbodyConstraints.None; //remove all constraints
                     m_Rigidbody.constraints = RigidbodyConstraints.FreezeRotation; //add back original rotational constraints
@@ -242,13 +242,16 @@ namespace UnityStandardAssets.Characters.ThirdPerson
                 m_IsGrounded = false;
                 m_Animator.applyRootMotion = false;
                 m_GroundCheckDistance = .2f;
-          
+             
+                
+
             }
 
             else
             {
                 
                 m_GroundCheckDistance = m_OrigGroundCheckDistance;
+               
             }
 		}
 
