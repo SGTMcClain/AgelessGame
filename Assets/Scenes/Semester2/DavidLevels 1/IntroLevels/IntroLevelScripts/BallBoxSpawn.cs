@@ -12,6 +12,8 @@ public class BallBoxSpawn : MonoBehaviour {
 
     private int ballCount; // for our loop. We don't want extra balls/boxes spawning.
 
+    private CharacterSwitch babyActive;
+
 
     // Use this for initialization
     void Start() {
@@ -19,6 +21,7 @@ public class BallBoxSpawn : MonoBehaviour {
 
         ballCount = 0; // we start the game with no ball/box spawned
 
+        bool babyActive = GetComponent<CharacterSwitch>();
     }
 
     // Update is called once per frame
@@ -66,7 +69,7 @@ public class BallBoxSpawn : MonoBehaviour {
         // despawns/destroys the ball/box with E key only when there is a spawned ball/box and ball count equal 1. Sets the ball count back to 0 and spawned to 0
         if (spawned == true)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) || babyActive.disableBaby== true)
             {
                 while (ballCount == 1)
                 {
