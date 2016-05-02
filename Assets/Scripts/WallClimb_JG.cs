@@ -26,7 +26,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		void Start () {
 			m_climb = GetComponent<Animator>();
 			bool grounded = GetComponent<ThirdPersonCharacter>();
-		
+			m_wall = GameObject.FindWithTag ("Wall");
 		}
 		
 		// Update is called once per frame
@@ -62,11 +62,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 				}
 
-		void OnTriggerStay(Collider otherWall)
+		void OnTriggerStay(Collider target)
 
 
 		{
-			if (otherWall.gameObject.name == m_wall.name)
+			if(target.tag == "Wall")
 
 			{
 
