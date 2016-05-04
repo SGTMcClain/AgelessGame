@@ -169,6 +169,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				m_climb.SetBool ("IClimb", false);
 				m_climb.SetBool ("WClimb", false);
 				m_climb.SetBool ("EClimb", false);
+				GetComponent<ThirdPersonUserControl> ().enabled = true;
 
 			}
 
