@@ -15,23 +15,31 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		//public GameObject child1;
 		//public GameObject child2;
 		public GameObject modelElder;
-		public GameObject m_wall;
-		public GameObject m_edge;
+	//	public GameObject m_wall;
+	//	public GameObject m_edge;
 		public Rigidbody rElder;
 		public ThirdPersonCharacter grounded; 
-
-	
+		//public ThirdPersonCharacter rigid; 
+		//Rigidbody m_Rigidbody;
+	//	bool horizaontalEnable = true;
+		//float horizontalMove;
+	//	float moveSpeed = 0.1f;
 		// Use this for initialization
+
+		//float xPos;
+	
 
 		void Start () {
 			m_climb = GetComponent<Animator>();
 			bool grounded = GetComponent<ThirdPersonCharacter>();
-			m_wall = GameObject.FindWithTag ("Wall");
+			//bool rigid = GetComponent<ThirdPersonCharacter>();
+			//m_wall = GameObject.FindWithTag ("Wall");
+		//	m_Rigidbody = GetComponent<Rigidbody>();
 		}
 		
 		// Update is called once per frame
 		void Update () {
-
+			//xPos = transform.position.x;
 /*			if (Input.GetKeyDown (KeyCode.F)) {
 		//Joel: If F is preessed the Animator "Punch" State Boolean is set to true
 				punch.SetBool ("Punch", true);
@@ -59,7 +67,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		}
 */	
 
-
+			//horizontalMove = Input.GetAxis ("Horizontal") * moveSpeed;
 				}
 
 		void OnTriggerStay(Collider target)
@@ -75,12 +83,23 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				grounded.m_IsGrounded = true;
 		//		m_climb.SetBool ("OnWall", true);
 				m_climb.SetBool ("IClimb", true);
-			
-			
+				GetComponent<ThirdPersonUserControl> ().enabled = false;
+
+				//transform.position += new Vector3 (horizontalMove,0);
+				//horizontalMove = 0;
+
+				//move.magnitude == 0f && !moveLocked;
+				//m_Rigidbody.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
+				//var pos = transform.position;
+				//pos.x =  Mathf.Clamp(transform.position.x, 1, -1);
+				//transform.position = pos;
+			//	transform.position = new Vector3 (xPos, transform.position.x, 0);			
 				if (Input.GetKey (KeyCode.W)) {
 					//m_climb.SetBool ("IClimb", false);
 					m_climb.SetBool ("WClimb", true);
 					modelElder.transform.Translate (0, Time.deltaTime * 3, 0, Camera.main.transform);
+
+
 
 				
 				} 
@@ -113,8 +132,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			}
 		}
 
-		void OnTriggerEnter(Collider otherWall){
-			if (otherWall.gameObject.name == m_edge.name) {
+		void OnTriggerEnter(Collider target){
+			if (target.tag == "Edge") {
 				print ("EClimb enter triggered");
 				m_climb.SetBool ("EClimb", true);
 				m_climb.SetBool ("WClimb", false);
@@ -125,23 +144,24 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 
 
-		void OnTriggerExit(Collider otherWall)
+		void OnTriggerExit(Collider target)
 
 
 		{
-			if (otherWall.gameObject.name == m_wall.name)
+			if(target.tag == "Wall")
 
 			{
 
 				rElder.isKinematic = false;	
 				m_climb.SetBool ("IClimb", false);
 				m_climb.SetBool ("WClimb", false);
+				GetComponent<ThirdPersonUserControl> ().enabled = true;
 
 			}
 
 
 
-			if (otherWall.gameObject.name == m_edge.name)
+			if (target.tag == "Edge")
 
 			{
 				print ("EClimb exit triggered");

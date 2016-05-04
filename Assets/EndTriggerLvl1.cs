@@ -10,7 +10,7 @@ public class EndTriggerLvl1 : MonoBehaviour {
 		if (other.gameObject.CompareTag("Player"))
 		
 	{
-				Application.LoadLevel(2);
+				Application.LoadLevel(3);
 			}
 			
 	}

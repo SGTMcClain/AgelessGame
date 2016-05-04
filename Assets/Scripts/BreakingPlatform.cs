@@ -76,7 +76,7 @@ public class BreakingPlatform : MonoBehaviour
     IEnumerator waitToBreak()
     {
 
-        yield return new WaitForSeconds(3); // this how long before platform breaks/disappears
+        yield return new WaitForSeconds(2); // this how long before platform breaks/disappears
 
         mPlatform.gameObject.SetActive(false);
         
@@ -92,7 +92,7 @@ public class BreakingPlatform : MonoBehaviour
     IEnumerator waitToReform()
 
     {
-        yield return new WaitForSeconds(6); // time for before platform reappears
+        yield return new WaitForSeconds(1); // time for before platform reappears
         mPlatform.gameObject.SetActive(true);
         
     }
