@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EndTriggerLvl3 : MonoBehaviour {
+public class EndTriggerLvl5 : MonoBehaviour {
 	void OnTriggerEnter(Collider other) 
 	{
 		if (other.gameObject.CompareTag("Player"))
 
 		{
-			Application.LoadLevel(7);
+			Application.LoadLevel(9);
 		}
 
 	}
